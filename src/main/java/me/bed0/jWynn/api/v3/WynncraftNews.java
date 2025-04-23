@@ -1,12 +1,12 @@
 package me.bed0.jWynn.api.v3;
 
 public class WynncraftNews {
-    private String title;
-    private String date;
-    private String forumThread;
-    private String author;
-    private String content;
-    private String comments;
+    private final String title;
+    private final String date;
+    private final String forumThread;
+    private final String author;
+    private final String content;
+    private final String comments;
 
     public WynncraftNews(String title, String date, String forumThread, String author, String content, String comments) {
         this.title = title;

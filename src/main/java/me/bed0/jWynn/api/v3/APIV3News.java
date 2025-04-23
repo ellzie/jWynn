@@ -5,7 +5,7 @@ import me.bed0.jWynn.api.v3.endpoints.APIV3WynncraftNewsLatest;
 
 public class APIV3News {
 
-    private WynncraftAPI api;
+    private final WynncraftAPI api;
 
     public APIV3News(WynncraftAPI api) {
         this.api = api;

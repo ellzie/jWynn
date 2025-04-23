@@ -1,7 +1,6 @@
 package me.bed0.jWynn.api.v3.endpoints;
 
 import com.google.gson.reflect.TypeToken;
-import me.bed0.jWynn.WynncraftAPI;
 import me.bed0.jWynn.api.APIMidpoint;
 import me.bed0.jWynn.api.APIRequestV3;
 import me.bed0.jWynn.api.v3.APIResponseV3;

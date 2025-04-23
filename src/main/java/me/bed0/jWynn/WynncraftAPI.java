@@ -54,10 +54,10 @@ public class WynncraftAPI extends APIMidpoint {
             .create();
     public static final String VERSION = "0.8.3";
     private static WynncraftAPI INSTANCE;
-    private WynncraftAPIConfig config;
-    private APIVersion1 v1;
-    private APIVersion2 v2;
-    private APIVersion3 v3;
+    private final WynncraftAPIConfig config;
+    private final APIVersion1 v1;
+    private final APIVersion2 v2;
+    private final APIVersion3 v3;
 
     public WynncraftAPI() {
         this(new WynncraftAPIConfig());

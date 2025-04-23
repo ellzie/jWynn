@@ -23,6 +23,7 @@ import me.bed0.jWynn.api.v2.ingredient.WynncraftIngredient;
 import me.bed0.jWynn.api.v2.ingredient.WynncraftIngredientIdentificationDetails;
 import me.bed0.jWynn.api.v2.player.PlayerRank;
 import me.bed0.jWynn.api.v2.player.meta.WynncraftPlayerMetaTag;
+import me.bed0.jWynn.api.v3.APIVersion3;
 import me.bed0.jWynn.config.WynncraftAPIConfig;
 import me.bed0.jWynn.util.DateDeserializer;
 
@@ -56,6 +57,7 @@ public class WynncraftAPI extends APIMidpoint {
     private WynncraftAPIConfig config;
     private APIVersion1 v1;
     private APIVersion2 v2;
+    private APIVersion3 v3;
 
     public WynncraftAPI() {
         this(new WynncraftAPIConfig());
@@ -69,6 +71,7 @@ public class WynncraftAPI extends APIMidpoint {
         this.config = config;
         this.v1 = new APIVersion1(this);
         this.v2 = new APIVersion2(this);
+        this.v3 = new APIVersion3(this);
 
         WynncraftAPI.INSTANCE = this;
     }
@@ -90,6 +93,11 @@ public class WynncraftAPI extends APIMidpoint {
     @CheckReturnValue
     public APIVersion2 v2() {
         return v2;
+    }
+
+    @CheckReturnValue
+    public APIVersion3 v3() {
+        return v3;
     }
 
     public WynncraftAPIConfig getConfig() {

@@ -1,6 +1,6 @@
 package me.bed0.jWynn;
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
+
 import me.bed0.jWynn.api.common.WynncraftProfession;
 import me.bed0.jWynn.api.v1.item.ItemCategory;
 import me.bed0.jWynn.exceptions.APIConnectionException;
@@ -63,7 +63,6 @@ public class jWynnTests {
         api.v1().playerLeaderboard().run();
     }
 
-    @Ignore
     @Test
     void v1StatsSearchSuccessful() {
         api.v1().statsSearch("Test").run();
@@ -107,5 +106,11 @@ public class jWynnTests {
     @Test
     void v2RecipeSuccessful() {
         api.v2().recipe().get("Boots-1-3").run();
+    }
+
+    @Test
+    void v3LatestNewsSuccessful(){
+        System.out.println(api.v3().news().latest().runIncludeMeta().getData()[0].toString());
+
     }
 }

@@ -1,4 +1,4 @@
-package me.bed0.jWynn.api.v3;
+package me.bed0.jWynn.api.v3.routes;
 
 import me.bed0.jWynn.WynncraftAPI;
 import me.bed0.jWynn.api.v3.endpoints.APIV3WynncraftNewsLatest;

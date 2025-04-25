@@ -8,6 +8,16 @@ public class jWynnTestsV3 {
 
     @Test
     void v3LatestNewsSuccessful(){
-        System.out.println(api.v3().news().latest().runIncludeMeta().getData()[0].toString());
+        api.v3().news().latest().run();
+    }
+
+    @Test
+    void v3ClassListSuccessful(){
+        api.v3().classes().classesList().run();
+    }
+
+    @Test
+    void v3ClassInfoSuccessful(){
+        api.v3().classes().classesInfo("mage").run();
     }
 }

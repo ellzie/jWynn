@@ -1,6 +1,8 @@
 package me.bed0.jWynn.api.v3;
 
-public class APIResponseV3<T> {
+import me.bed0.jWynn.api.APIResponse;
+
+public class APIResponseV3<T> implements APIResponse<T> {
     private final T data;
 
     public APIResponseV3(T data) {

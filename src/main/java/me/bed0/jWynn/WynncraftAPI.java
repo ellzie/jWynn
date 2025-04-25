@@ -85,6 +85,11 @@ public class WynncraftAPI extends APIMidpoint {
         return (int) (System.currentTimeMillis() / 1000L);
     }
 
+    /**
+     * @deprecated This function uses the V1 API which is no longer available (returns 404).
+     * Use the V2 equivalent instead. This function will be removed in a future release.
+     */
+    @Deprecated
     @CheckReturnValue
     public APIVersion1 v1() {
         return v1;

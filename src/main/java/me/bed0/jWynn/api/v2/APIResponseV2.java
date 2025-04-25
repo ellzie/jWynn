@@ -32,12 +32,10 @@ public class APIResponseV2<T> implements APIResponse<T> {
         return message;
     }
 
-    @Override
     public long getTimestamp() {
         return timestamp;
     }
 
-    @Override
     public String getVersion() {
         return version;
     }

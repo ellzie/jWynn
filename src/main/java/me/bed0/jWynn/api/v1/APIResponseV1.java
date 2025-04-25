@@ -12,12 +12,10 @@ public class APIResponseV1<T> implements APIResponse<T> {
         this.data = data;
     }
 
-    @Override
     public String getVersion() {
         return request.getVersion();
     }
 
-    @Override
     public long getTimestamp() {
         return request.getTimestamp();
     }

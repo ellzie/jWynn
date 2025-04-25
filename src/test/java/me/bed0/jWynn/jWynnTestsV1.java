@@ -1,15 +1,21 @@
 package me.bed0.jWynn;
 
 
-import me.bed0.jWynn.api.common.WynncraftProfession;
 import me.bed0.jWynn.api.v1.item.ItemCategory;
 import me.bed0.jWynn.exceptions.APIConnectionException;
 import me.bed0.jWynn.exceptions.APIResponseException;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class jWynnTests {
+/**
+ *  @deprecated This class of tests uses the v1 API which is no longer available (returns 404)
+ *  Use the V2 equivalent instead. This function will be removed in a future update.
+ */
+@Deprecated
+@Disabled("API V1 no longer supported")
+public class jWynnTestsV1 {
 
     private static WynncraftAPI api = new WynncraftAPI();
 
@@ -73,44 +79,7 @@ public class jWynnTests {
         api.v1().territoryList().run();
     }
 
-    @Test
-    void v2IngredientListSuccessful() {
-        api.v2().ingredient().list().run();
-    }
 
-    @Test
-    void v2IngredientRequestSuccessful() {
-        api.v2().ingredient().get("Accursed Effigy").run();
-    }
 
-    @Test
-    void v2IngredientSearchSuccessful() {
-        api.v2().ingredient().search().name("Test").run();
-    }
 
-    @Test
-    void v2PlayerStatsSuccessful() {
-        api.v2().player().statsUUID("5aa0ae01-8c1b-4e0a-b31b-825389a7cb7b").run();
-    }
-
-    @Test
-    void v2RecipeListSuccessful() {
-        api.v2().recipe().list().run();
-    }
-
-    @Test
-    void v2RecipeSearchSuccessful() {
-        api.v2().recipe().search().profession(WynncraftProfession.ALCHEMISM).run();
-    }
-
-    @Test
-    void v2RecipeSuccessful() {
-        api.v2().recipe().get("Boots-1-3").run();
-    }
-
-    @Test
-    void v3LatestNewsSuccessful(){
-        System.out.println(api.v3().news().latest().runIncludeMeta().getData()[0].toString());
-
-    }
 }

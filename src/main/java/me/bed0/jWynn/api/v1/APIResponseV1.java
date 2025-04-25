@@ -4,8 +4,8 @@ import me.bed0.jWynn.api.APIResponse;
 
 public class APIResponseV1<T> implements APIResponse<T> {
 
-    private APIResponseV1Request request;
-    private T data;
+    private final APIResponseV1Request request;
+    private final T data;
 
     public APIResponseV1(APIResponseV1Request request, T data) {
         this.request = request;

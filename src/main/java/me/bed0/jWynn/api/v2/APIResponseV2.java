@@ -4,12 +4,12 @@ import me.bed0.jWynn.api.APIResponse;
 
 public class APIResponseV2<T> implements APIResponse<T> {
 
-    private String kind;
-    private int code;
-    private String message;
-    private long timestamp;
-    private String version;
-    private T data;
+    private final String kind;
+    private final int code;
+    private final String message;
+    private final long timestamp;
+    private final String version;
+    private final T data;
 
     public APIResponseV2(String kind, int code, String message, long timestamp, String version, T data) {
         this.kind = kind;

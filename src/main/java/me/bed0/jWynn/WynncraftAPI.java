@@ -87,7 +87,7 @@ public class WynncraftAPI extends APIMidpoint {
 
     /**
      * @deprecated This function uses the V1 API which is no longer available (returns 404).
-     * Use the V2 equivalent instead. This function will be removed in a future release.
+     * Use the V2 or V3 equivalents instead. This function will be removed in a future release.
      */
     @Deprecated
     @CheckReturnValue

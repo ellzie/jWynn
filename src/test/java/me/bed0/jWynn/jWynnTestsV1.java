@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *  @deprecated This class of tests uses the v1 API which is no longer available (returns 404)
- *  Use the V2 equivalent instead. This function will be removed in a future update.
+ *  Use the V2 or V3 equivalents instead. This function will be removed in a future update.
  */
 @Deprecated
 @Disabled("API V1 no longer supported")

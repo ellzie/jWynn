@@ -1,4 +1,4 @@
-package me.bed0.jWynn.api.v1.map;
+package me.bed0.jWynn.api.common;
 
 public class WynncraftMapLocation {
 
@@ -32,6 +32,6 @@ public class WynncraftMapLocation {
      * Get the URL for image of this icon. <b>Once downloaded this image should be cached.</b>
      */
     public String getIconURL() {
-        return "https://map.wynncraft.com/" + icon;
+        return "https://map.wynncraft.com/img/" + icon;
     }
 }

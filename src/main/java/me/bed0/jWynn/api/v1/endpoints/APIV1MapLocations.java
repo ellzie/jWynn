@@ -10,7 +10,7 @@ import me.bed0.jWynn.api.APIRequest;
 import me.bed0.jWynn.api.APIResponse;
 import me.bed0.jWynn.api.v1.APIResponseV1;
 import me.bed0.jWynn.api.v1.APIResponseV1Request;
-import me.bed0.jWynn.api.v1.map.WynncraftMapLocation;
+import me.bed0.jWynn.api.common.WynncraftMapLocation;
 
 import java.lang.reflect.Type;
 

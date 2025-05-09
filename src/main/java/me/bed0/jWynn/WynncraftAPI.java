@@ -13,7 +13,7 @@ import me.bed0.jWynn.api.v1.guild.WynncraftGuild;
 import me.bed0.jWynn.api.v1.item.ItemTier;
 import me.bed0.jWynn.api.v1.item.MajorID;
 import me.bed0.jWynn.api.v1.item.WynncraftItem;
-import me.bed0.jWynn.api.v1.map.WynncraftMapLocation;
+import me.bed0.jWynn.api.common.WynncraftMapLocation;
 import me.bed0.jWynn.api.v1.network.WynncraftOnlinePlayerSum;
 import me.bed0.jWynn.api.v1.network.WynncraftOnlinePlayers;
 import me.bed0.jWynn.api.v1.search.StatsSearchResult;

@@ -1,10 +1,7 @@
 package me.bed0.jWynn.api.v3;
 
 import me.bed0.jWynn.WynncraftAPI;
-import me.bed0.jWynn.api.v3.routes.APIV3Classes;
-import me.bed0.jWynn.api.v3.routes.APIV3Guilds;
-import me.bed0.jWynn.api.v3.routes.APIV3Map;
-import me.bed0.jWynn.api.v3.routes.APIV3News;
+import me.bed0.jWynn.api.v3.routes.*;
 
 public class APIVersion3 {
     private final WynncraftAPI api;
@@ -12,6 +9,7 @@ public class APIVersion3 {
     private final APIV3Classes classesList;
     private final APIV3Guilds guilds;
     private final APIV3Map map;
+    private final APIV3Items items;
 
     public APIVersion3(WynncraftAPI api) {
         this.api = api;
@@ -19,6 +17,7 @@ public class APIVersion3 {
         this.classesList = new APIV3Classes(api);
         this.guilds = new APIV3Guilds(api);
         this.map = new APIV3Map(api);
+        this.items = new APIV3Items(api);
     }
 
     public APIV3News news() {
@@ -35,5 +34,9 @@ public class APIVersion3 {
 
     public APIV3Map map() {
         return map;
+    }
+
+    public APIV3Items items(){
+        return items;
     }
 }

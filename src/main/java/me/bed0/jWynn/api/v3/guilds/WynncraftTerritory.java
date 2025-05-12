@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class WynncraftTerritory {
     public class Coordinates {
+        // This class may need moved
         private int[] start;
         private int[] end;
 

@@ -21,6 +21,8 @@ public class APIV3Guilds {
 
     /*
      * This endpoint is undocumented. TODO: considering using actual UUID type instead of string.
+     *                                 I think that UUID is actually slower than String when not generating UUIDs which
+     *                                 will not be happening.
      */
     public APIV3GetGuild byUUID(String guildUUID){
         return new APIV3GetGuild(api.getConfig().getBaseURL() + "v3/guild/uuid/" + guildUUID + "?identifier=username",api);

@@ -31,10 +31,10 @@ public class jWynnTestsV3 {
     }
     @Test
     void v3MapMarkers(){
-        api.v3().getMap().list().run();
+        api.v3().map().list().run();
     }
     @Test
     void v3MapPlayer(){
-        api.v3().getMap().player().run();
+        api.v3().map().player().run();
     }
 }

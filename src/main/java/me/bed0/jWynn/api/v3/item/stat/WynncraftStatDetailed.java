@@ -1,4 +1,4 @@
-package me.bed0.jWynn.api.v3.item;
+package me.bed0.jWynn.api.v3.item.stat;
 
 public class WynncraftStatDetailed extends WynncraftStat {
     private int min;

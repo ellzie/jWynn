@@ -1,5 +1,8 @@
 package me.bed0.jWynn.api.v3.item;
 
+import me.bed0.jWynn.api.v3.item.icon.WynncraftIcon;
+import me.bed0.jWynn.api.v3.item.stat.WynncraftStat;
+
 import java.util.Arrays;
 import java.util.HashMap;
 

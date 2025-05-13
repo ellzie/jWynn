@@ -1,27 +1,32 @@
 package me.bed0.jWynn.api.v3.item.icon;
 
 public class WynncraftIconValue {
-    private String strValue;
-    private WynncraftAttribute attrValue;
-
-    public WynncraftIconValue() {
-        strValue = "";
-        attrValue = new WynncraftAttribute();
-    }
+    private String raw;
+    private WynncraftAttribute attribute;
 
     public WynncraftIconValue(String strValue){
-        this.strValue = strValue;
-        this.attrValue = new WynncraftAttribute();
+        this.raw = strValue;
+        this.attribute = null;
     }
 
     public WynncraftIconValue(WynncraftAttribute attrValue){
-        this.strValue = "";
-        this.attrValue = attrValue;
+        this.raw = null;
+        this.attribute = attrValue;
     }
 
-    public WynncraftIconValue(String strValue, WynncraftAttribute attrValue) {
-        this.strValue = strValue;
-        this.attrValue = attrValue;
+
+    public boolean isRaw(){
+        return this.raw != null;
+    }
+    public boolean isAttribute(){
+        return this.attribute != null;
     }
 
+    public String getRaw() {
+        return raw;
+    }
+
+    public WynncraftAttribute getAttribute() {
+        return attribute;
+    }
 }

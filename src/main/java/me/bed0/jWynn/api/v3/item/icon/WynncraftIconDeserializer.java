@@ -14,9 +14,9 @@ public class WynncraftIconDeserializer implements JsonDeserializer<WynncraftIcon
             String id = value.get("id").getAsString();
             String name = value.get("name").getAsString();
             String customModelData = value.get("customModelData").getAsString();
-            return new WynncraftIconAttribute(mainObject.get("format").getAsString(), new WynncraftAttribute(id, name, customModelData));
+            return new WynncraftIcon(mainObject.get("format").getAsString(), new WynncraftIconValue(new WynncraftAttribute(id, name, customModelData)));
         } else {
-            return new WynncraftIconString(mainObject.get("format").getAsString(), mainObject.get("value").getAsString());
+            return new WynncraftIcon(mainObject.get("format").getAsString(), new WynncraftIconValue(mainObject.get("value").getAsString()));
         }
     }
 }

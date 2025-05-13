@@ -6,12 +6,21 @@ import java.lang.reflect.Type;
 
 public class WynncraftStatDeserializer implements JsonDeserializer<WynncraftStat> {
     @Override
-    public WynncraftStat deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
-        if (jsonElement.isJsonPrimitive()){
-            return new WynncraftStatRaw(jsonElement.getAsInt());
+    public WynncraftStat deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+        int min, max, raw;
+        String source;
+        if (json.isJsonObject()) {
+            JsonObject obj = json.getAsJsonObject();
+            min = obj.get("min").getAsInt();
+            max = obj.get("max").getAsInt();
+            raw = obj.get("raw").getAsInt();
+            source = "detailed";
         } else {
-            JsonObject mainObject = jsonElement.getAsJsonObject();
-            return new WynncraftStatDetailed(mainObject.get("min").getAsInt(), mainObject.get("max").getAsInt(), mainObject.get("raw").getAsInt());
+            raw = json.getAsInt();
+            min = 0;
+            max = 0;
+            source = "raw";
         }
+        return new WynncraftStat(min, max, raw, source);
     }
 }

@@ -5,6 +5,12 @@ public class WynncraftAttribute {
     private String name;
     private String customModelData;
 
+    public WynncraftAttribute() {
+        this.id = "";
+        this.name = "";
+        this.customModelData = "";
+    }
+
     public WynncraftAttribute(String id, String name, String customModelData) {
         this.id = id;
         this.name = name;
